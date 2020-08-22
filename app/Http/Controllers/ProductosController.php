@@ -16,7 +16,7 @@ class ProductosController extends Controller
     public function index()
     {
         //$datos=productos::all();
-        $datos=productos::paginate(2);
+        $datos=productos::paginate(3);
         return view("productos.mostrar",compact('datos'));
         //
     }
@@ -48,7 +48,7 @@ class ProductosController extends Controller
         }
         productos::insert($datosEmpleados);
 
-        return response()->json($datosEmpleados);
+        return view("productos.agregar");
     }
 
     /**

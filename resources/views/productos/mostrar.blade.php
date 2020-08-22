@@ -1,3 +1,5 @@
+@extends("layouts.app")
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +35,10 @@
             <tr>
                 <td>{{$loop->iteration }}</td>
                 <td>{{$item->Producto}}</td>
-                <td></td>
+                <td>{{$item->Descripcion}}</td>
+                <td>{{$item->Precio}}</td>
+
+
                 <td>{{asset('storage').'/'.$item->imagen}}</td>
             <td><img class="img-fluid" src="{{ asset('storage').'/'.$item->imagen}}" alt="foto" style="width: 50px"></td>>
             <td><a href="{{ url('/productos/'.$item->id.'/edit')}}">Editar</a> | <form action="{{url('/productos/'.$item->id)}}" method="post">
@@ -50,3 +55,4 @@
 
 </body>
 </html>
+@endsection

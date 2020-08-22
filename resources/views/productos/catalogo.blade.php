@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('content')
 <style>
     body{margin-top:20px;
 background:#ddd;
